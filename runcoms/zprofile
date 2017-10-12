@@ -28,6 +28,7 @@ export PAGER='less'
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
+export LC_CTYPE="$LANG"
 
 #
 # Paths
@@ -45,6 +46,7 @@ cdpath=(
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  ~/.local/bin
   /usr/local/{bin,sbin}
   /usr/local/opt/python/libexec/bin
   $path
