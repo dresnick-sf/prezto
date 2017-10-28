@@ -13,3 +13,7 @@ fi
 # Customize to your needs...
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+alias bst="ps -ef | grep ssh/socket | grep -v grep"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/local/share/zsh/site-functions/aws_zsh_completer.sh ] && source /usr/local/share/zsh/site-functions/aws_zsh_completer.sh
