@@ -52,6 +52,11 @@ path=(
   $path
 )
 
+# fpath=(
+#   /usr/local/share/zsh/functions
+#   $fpath
+# )
+
 #
 # Less
 #
