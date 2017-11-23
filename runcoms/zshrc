@@ -31,6 +31,4 @@ _fzf_compgen_dir() {
 }
 export FZF_CTRL_T_OPTS=" --preview '(highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'"
 
-[ -f /usr/local/share/zsh/site-functions/aws_zsh_completer.sh ] && source /usr/local/share/zsh/site-functions/aws_zsh_completer.sh
-
 setopt interactivecomments
