@@ -47,8 +47,8 @@ cdpath=(
 path=(
   ~/bin
   ~/.local/bin
+  /usr/local/opt/python@2/libexec/bin
   /usr/local/{bin,sbin}
-  /usr/local/opt/python/libexec/bin
   $path
 )
 
