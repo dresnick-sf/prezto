@@ -32,3 +32,16 @@ _fzf_compgen_dir() {
 export FZF_CTRL_T_OPTS=" --preview '(highlight -O ansi -l {} || cat {}) 2> /dev/null | head -500'"
 
 setopt interactivecomments
+
+export IMPLISIT_ANSIBLE=/Users/dresnick/src/proj/implisit/infra/ansible
+function cdrun()
+{
+	dir=$1
+	cmd=$2
+	shift 2
+
+	( cd "$dir" && "$cmd" "$@" )
+}
+
+alias ansible='cdrun $IMPLISIT_ANSIBLE ansible'
+alias ansible-playbook='cdrun $IMPLISIT_ANSIBLE ansible-playbook'
