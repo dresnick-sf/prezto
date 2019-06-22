@@ -35,7 +35,6 @@ setopt interactivecomments
 
 export DEFAULT_USER=dresnick
 
-export VIRTUAL_ENV_DISABLE_PROMPT=
 export POWERLEVEL9K_VIRTUALENV_BACKGROUND='springgreen4'
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv virtualenv aws kubecontext dir vcs vi_mode)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator background_jobs time)
@@ -44,3 +43,5 @@ export POWERLEVEL9K_KUBECONTEXT_DEFAULT_CONFIG=minikube
 # export POWERLEVEL9K_KUBECONTEXT_DEFAULT_NAMESPACE=default
 export POWERLEVEL9K_KUBECONTEXT_SHOW_DEFAULT_NAMESPACE=false
 # export POWERLEVEL9K_KUBECONTEXT_SHOW_DEFAULT_CONFIG=false
+export POWERLEVEL9K_VI_INSERT_MODE_STRING="%B%F{1}❯%F{3}❯%F{2}❯%f%b"
+export POWERLEVEL9K_VI_COMMAND_MODE_STRING="%B%F{2}❮%F{3}❮%F{1}❮%f%b"
