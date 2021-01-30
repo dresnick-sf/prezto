@@ -1,16 +1,16 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 #
 # Executes commands at the start of an interactive session.
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -20,7 +20,6 @@ fi
 # Customize to your needs...
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-alias bst="ps -ef | grep ssh/socket | grep -v grep"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Use rg (https://github.com/BurntSushi/ripgrep) instead of the default find
@@ -41,17 +40,6 @@ export FZF_CTRL_T_OPTS=" --preview '(highlight -O ansi -l {} || cat {}) 2> /dev/
 setopt interactivecomments
 
 export DEFAULT_USER=dresnick
-
-export POWERLEVEL9K_VIRTUALENV_BACKGROUND='springgreen4'
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv virtualenv aws kubecontext dir vcs vi_mode)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status root_indicator background_jobs time)
-export POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-export POWERLEVEL9K_KUBECONTEXT_DEFAULT_CONFIG=minikube
-# export POWERLEVEL9K_KUBECONTEXT_DEFAULT_NAMESPACE=default
-export POWERLEVEL9K_KUBECONTEXT_SHOW_DEFAULT_NAMESPACE=false
-# export POWERLEVEL9K_KUBECONTEXT_SHOW_DEFAULT_CONFIG=false
-export POWERLEVEL9K_VI_INSERT_MODE_STRING="%B%F{1}❯%F{3}❯%F{2}❯%f%b"
-export POWERLEVEL9K_VI_COMMAND_MODE_STRING="%B%F{2}❮%F{3}❮%F{1}❮%f%b"
 
 # BEGIN ANSIBLE MANAGED BLOCK: pyenv
 if [ -e "$HOME/.pyenv/.pyenvrc" ]; then
